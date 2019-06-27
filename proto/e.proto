@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sqrt;
+
+option go_package = "sqrtpb";
+
+message SqrtReq {
+  int32 SqrtInput = 1;
+}
+
+message SqrtRes {
+  float SqrtResult = 1;
+}
+
+service SqrtService {
+  rpc Sqrt(SqrtReq) returns (SqrtRes){};
+}
